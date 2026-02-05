@@ -58,7 +58,7 @@ const BackgroundMusic = ({ isPlaying }) => {
             </button>
             <audio
                 ref={audioRef}
-                src="/birthday-song.wav"
+                src={import.meta.env.BASE_URL + "birthday-song.wav"}
                 loop
                 onError={(e) => console.log("Audio file missing or error", e)}
             />
