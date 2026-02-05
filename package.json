@@ -2,7 +2,7 @@
   "name": "hbd",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sixmanz.github.io/Hbd/",
+  "homepage": "https://sixmanz.github.io/Happy-Birthday/",
   "type": "module",
   "scripts": {
     "dev": "vite",
