@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday! 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-DV07v5Bv.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BD3dWdPc.css">
+</head>
+
+<body>
+  <div id="debug-log"
+    style="position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.8); color: lime; padding: 10px; z-index: 9999; display: none; max-width: 100vw; word-wrap: break-word;">
+  </div>
+  <script>
+    window.onerror = function (msg, url, line, col, error) {
+      var d = document.getElementById('debug-log');
+      d.style.display = 'block';
+      d.innerHTML += '<p>Error: ' + msg + '<br>' + url + ':' + line + ':' + col + '</p>';
+      console.error('Logged Error:', msg, error);
+    };
+    window.addEventListener('unhandledrejection', function (e) {
+      var d = document.getElementById('debug-log');
+      d.style.display = 'block';
+      d.innerHTML += '<p>Promise Rejection: ' + e.reason + '</p>';
+    });
+  </script>
+  <div id="root"></div>
+</body>
+
+</html>
